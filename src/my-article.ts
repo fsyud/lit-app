@@ -5,7 +5,7 @@ import { customElement } from "lit/decorators.js";
 class MyArticle extends LitElement {
   static styles = css`
     article {
-      padding: 20px;
+      padding: 20px 0;
       font-family: "Open Sans", sans-serif;
     }
   `;
