@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lit-labs/motion": "^1.0.4",
     "lit": "^2.8.0"
   },
   "devDependencies": {

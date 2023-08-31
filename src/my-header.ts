@@ -1,16 +1,53 @@
-import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { LitElement, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { AnimateController, animate, flyBelow, fade } from "@lit-labs/motion";
+import { styles } from "./styles.js";
 
 @customElement("my-header")
 class MyHeader extends LitElement {
-  static styles = css`
-    h1 {
-      font-family: Manrope, sans-serif;
-      text-align: center;
-    }
-  `;
+  static styles = styles;
+
+  lit = ["F", "S", "Y", "U", "D"];
+
+  @property({ type: Array }) letters = this.lit;
+
+  duration = 1000;
+
+  controller = new AnimateController(this, {
+    defaultOptions: {
+      keyframeOptions: {
+        duration: this.duration,
+        fill: "backwards",
+      },
+    },
+    onComplete: () => this.changeLayout(),
+  });
+
   render() {
-    return html` <header><h1>About me</h1></header> `;
+    const delayTime = this.duration / (this.letters.length * 2.5);
+
+    return html`
+      <main>
+        ${this.letters?.map(
+          (letter, i) =>
+            html`<span
+              class="letter"
+              ${animate({
+                keyframeOptions: {
+                  delay: i * delayTime,
+                },
+                in: fade,
+                out: flyBelow,
+              })}
+              >${letter}</span
+            >`
+        )}
+      </main>
+    `;
+  }
+
+  changeLayout() {
+    this.letters = this.letters.length ? [] : this.lit;
   }
 }
 
