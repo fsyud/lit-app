@@ -42,8 +42,11 @@ export class MyElement extends LitElement {
   // }
 
   static styles = css`
-    section {
-      margin: 60px auto;
+    :host {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
     }
     .title {
       font-size: 22px;
