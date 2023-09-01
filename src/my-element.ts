@@ -2,9 +2,9 @@ import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 // import litLogo from './assets/lit.svg'
 // import viteLogo from '/vite.svg'
-import './layout/my-header.ts';
-import './layout/my-article.ts';
-import './layout/my-footer.ts';
+import "./layout/my-header.ts";
+import "./layout/my-article.ts";
+import "./layout/my-footer.ts";
 
 /**
  * An example element.
@@ -14,25 +14,15 @@ import './layout/my-footer.ts';
  */
 @customElement("my-element")
 export class MyElement extends LitElement {
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property({ type: Number })
-  count = 0;
-
   render() {
     return html`
       <section>
-      <my-header></my-header>
-      <my-article></my-article>
-      <my-footer></my-footer>
+        <my-header></my-header>
+        <my-article></my-article>
+        <my-footer></my-footer>
       </section>
     `;
   }
-
-  // private _onClick() {
-  //   this.count++
-  // }
 
   static styles = css`
     :host {
