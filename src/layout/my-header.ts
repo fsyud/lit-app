@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { AnimateController, animate, flyBelow, fade } from "@lit-labs/motion";
-import { styles } from "./styles.js";
+import { styles } from "./styles.ts";
 
 @customElement("my-header")
 class MyHeader extends LitElement {

@@ -1,14 +1,8 @@
 import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
-
+import { customElement, state } from "lit/decorators.js";
 @customElement("my-article")
 class MyArticle extends LitElement {
-  static styles = css`
-    article {
-      padding: 20px 0;
-      font-family: "Open Sans", sans-serif;
-    }
-  `;
+
   render() {
     return html`
       <article>
@@ -16,9 +10,18 @@ class MyArticle extends LitElement {
           A free soul, in this blog, will share some daily Development essay.
           reading notes, human geography
         </p>
+        <div>
+        </div>
       </article>
     `;
   }
+
+  static styles = css`
+  article {
+    padding: 20px 0;
+    font-family: "Open Sans", sans-serif;
+  }
+`;
 }
 
 declare global {

@@ -2,9 +2,9 @@ import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 // import litLogo from './assets/lit.svg'
 // import viteLogo from '/vite.svg'
-import './my-header.ts';
-import './my-article.ts';
-import './my-footer.ts';
+import './layout/my-header.ts';
+import './layout/my-article.ts';
+import './layout/my-footer.ts';
 
 /**
  * An example element.
