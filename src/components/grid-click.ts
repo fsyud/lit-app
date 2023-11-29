@@ -17,7 +17,7 @@ export class MotionGrid extends LitElement {
         class="container layout${this.layout}"
       >
         ${a.map(
-          (v, i) => html`<div
+          (_, i) => html`<div
             class="item${i}"
             ${animate({
               keyframeOptions: {
