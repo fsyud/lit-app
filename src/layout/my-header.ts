@@ -11,7 +11,7 @@ class MyHeader extends LitElement {
 
   @property({ type: Array }) letters = this.lit;
 
-  duration = 2500;
+  duration = 2000;
 
   controller = new AnimateController(this, {
     defaultOptions: {

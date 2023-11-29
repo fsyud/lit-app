@@ -6,7 +6,8 @@ export class MainNavigation extends LitElement {
   static styles = [
     css`
       nav a {
-        margin: 1rem;
+        margin: 0.5rem;
+        font-family: "Open Sans", sans-serif;
       }
     `,
   ];
@@ -14,7 +15,7 @@ export class MainNavigation extends LitElement {
     return html`
       <nav>
         <a href="/">Home</a>
-        <a href="/3cutetimers">3cuteTimers</a>
+        <a href="/decompression-times">DecompressionTimes</a>
         <a href="/to-do">ToDo</a>
       </nav>
     `;

@@ -4,26 +4,25 @@ import { customElement } from "lit/decorators.js";
 
 import "./page/app-home.ts";
 import "./page/to-do.ts"
-import "./page/app-about.ts";
+import "./page/decompression-times.ts";
 
 import "./components/main-navigation.ts";
-import "./components/buncha-timers.ts";
-
+import "./page/decompression-times.ts"
 /**
  * An example element.
  *
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement("my-element")
-export class MyElement extends LitElement {
+@customElement("app-element")
+export class AppElement extends LitElement {
   static styles = css`
   :host {
-    max-width: 1280px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1rem;
     font-family: "JetBrains Mono", monospace;
   }
 `;
@@ -36,10 +35,10 @@ export class MyElement extends LitElement {
       },
     },
     {
-      path: "/3cutetimers",
-      render: () => html`<buncha-timers></buncha-timers>`,
+      path: "/decompression-times",
+      render: () => html`<decompression-times></decompression-times>`,
     },
-    { path: "/to-do", render: () => html`<app-about></app-about>` },
+    { path: "/to-do", render: () => html`<to-do></to-do>` },
   ]);
 
   render() {
@@ -52,6 +51,6 @@ export class MyElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "my-element": MyElement;
+    "app-element": AppElement;
   }
 }

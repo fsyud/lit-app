@@ -15,8 +15,11 @@ export const styles = [
 
     .letter {
       flex: 1;
-      font-size: 5vw;
+      font-size: 2vw;
+      min-width: 4vw;
       text-align: center;
+      font-style: italic;
+      font-family: "Open Sans", sans-serif;
       will-change: transform;
       background: linear-gradient(
         0deg,
